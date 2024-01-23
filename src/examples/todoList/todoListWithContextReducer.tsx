@@ -70,7 +70,7 @@ const useTodoContext = (): any => {
 // Context uses
 
 
-const TodoListWithContext: FC = () => {
+const TodoListWithContextReducer: FC = () => {
 
   const { state, dispatch } = useTodoContext();
 
@@ -148,7 +148,7 @@ const TodoListWithContext: FC = () => {
 
 const TodoListWithProvider = () => {
   return <TodoProvider>
-    <TodoListWithContext />
+    <TodoListWithContextReducer />
   </TodoProvider>
 }
 
