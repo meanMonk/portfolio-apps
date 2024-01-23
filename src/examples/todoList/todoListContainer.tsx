@@ -8,8 +8,8 @@ interface ITodoItem {
 }
 
 const TodoListContainer = () => {
-  const [todoList, setTodoList] = useState<ITodoItem[]>([]);
   const { handleSubmit, register, reset } = useForm();
+  const [todoList, setTodoList] = useState<ITodoItem[]>([]);
 
   const addTodo = (data: any) => {
     setTodoList([...todoList, { ...data, createdAt: Date.now(), isCompleted: false }])
